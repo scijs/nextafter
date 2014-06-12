@@ -3,7 +3,7 @@
 var doubleBits = require("double-bits")
 
 var SMALLEST_DENORM = Math.pow(2, -1074)
-var UINT_MAX = (1<<32)-1
+var UINT_MAX = (-1)>>>0
 
 module.exports = nextafter
 
@@ -22,10 +22,11 @@ function nextafter(x, y) {
     }
   }
   var hi = doubleBits.hi(x)
-  var lo = doubleBits.lo(x)  
+  var lo = doubleBits.lo(x)
   if((y > x) === (x > 0)) {
     if(lo === UINT_MAX) {
       hi += 1
+      lo = 0
     } else {
       lo += 1
     }
