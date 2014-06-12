@@ -2,6 +2,10 @@ nextafter
 =========
 Returns the next floating point number after any given number in the direction of some other floating point number. (Like the [C standard library function](http://en.cppreference.com/w/cpp/numeric/math/nextafter)).
 
+[![testling badge](https://ci.testling.com/mikolalysenko/nextafter.png)](https://ci.testling.com/mikolalysenko/nextafter)
+
+[![build status](https://secure.travis-ci.org/mikolalysenko/nextafter.png)](http://travis-ci.org/mikolalysenko/nextafter)
+
 ## Example
 
 ```javascript
